@@ -65,6 +65,8 @@ def detect_local_sm_architectures():
             arch_list.append(arch)
 
     arch_list = sorted(arch_list)
+    if len(arch_list) == 0:
+        arch_list = ["8.0"]
     arch_list[-1] += '+PTX'
     return arch_list
 
